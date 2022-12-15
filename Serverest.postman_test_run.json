@@ -1,0 +1,198 @@
+{
+	"id": "72d503e3-f8f4-4f17-b9bb-3629592e2127",
+	"name": "Serverest",
+	"timestamp": "2022-12-15T19:21:49.265Z",
+	"collection_id": "22158526-a922c696-d835-4a4b-a88d-00b0e58f375b",
+	"folder_id": 0,
+	"environment_id": "22158526-c5b151a8-52a2-4b7e-b45b-db0d7269dc1d",
+	"totalPass": 6,
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "78364f2a-b9ac-458b-a847-f6162f0cf167",
+			"name": "Buscar usuários cadastrado",
+			"url": "https://serverest.dev/usuarios",
+			"time": 529,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Deve retonar status code 200": true,
+				"Deve ter a propriedade 'quantidade' na resposta": true,
+				"Deve ter apenas mais de '1' usuário cadastrado": true
+			},
+			"testPassFailCounts": {
+				"Deve retonar status code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve ter a propriedade 'quantidade' na resposta": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve ter apenas mais de '1' usuário cadastrado": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				529
+			],
+			"allTests": [
+				{
+					"Deve retonar status code 200": true,
+					"Deve ter a propriedade 'quantidade' na resposta": true,
+					"Deve ter apenas mais de '1' usuário cadastrado": true
+				}
+			]
+		},
+		{
+			"id": "c99a3127-ad89-4c0f-a354-bac971eff853",
+			"name": "Cadastrar novo usuário e salva o -id cadastrado",
+			"url": "https://serverest.dev/usuarios",
+			"time": 199,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Deve retornar status code 201": true,
+				"Deve salvar a propriedade '_id', da resposta": true
+			},
+			"testPassFailCounts": {
+				"Deve retornar status code 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve salvar a propriedade '_id', da resposta": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				199
+			],
+			"allTests": [
+				{
+					"Deve retornar status code 201": true,
+					"Deve salvar a propriedade '_id', da resposta": true
+				}
+			]
+		},
+		{
+			"id": "f91b38b2-12e7-4b97-8fca-9ccde68eeeb1",
+			"name": "Deletar ultimo usuário cadastrado",
+			"url": "https://serverest.dev/usuarios/LzKzyNuAb5z7xz5H",
+			"time": 203,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				203
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d7917773-7f8c-4a13-a155-1834ce7081dd",
+			"name": "Buscar usuário por id",
+			"url": "https://serverest.dev/usuarios/LzKzyNuAb5z7xz5H",
+			"time": 200,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				200
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "591837e6-8e42-4118-9f46-daa2d38bae12",
+			"name": "Realizar login",
+			"url": "https://serverest.dev/login",
+			"time": 204,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Deve retornar status code 200": false,
+				"Deve ter a propriedade 'authorization'": false,
+				"Deve salvar o bearer token": false
+			},
+			"testPassFailCounts": {
+				"Deve retornar status code 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Deve ter a propriedade 'authorization'": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Deve salvar o bearer token": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				204
+			],
+			"allTests": [
+				{
+					"Deve retornar status code 200": false,
+					"Deve ter a propriedade 'authorization'": false,
+					"Deve salvar o bearer token": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1335,
+	"collection": {
+		"requests": [
+			{
+				"id": "78364f2a-b9ac-458b-a847-f6162f0cf167",
+				"method": "GET"
+			},
+			{
+				"id": "c99a3127-ad89-4c0f-a354-bac971eff853",
+				"method": "POST"
+			},
+			{
+				"id": "f91b38b2-12e7-4b97-8fca-9ccde68eeeb1",
+				"method": "DELETE"
+			},
+			{
+				"id": "d7917773-7f8c-4a13-a155-1834ce7081dd",
+				"method": "GET"
+			},
+			{
+				"id": "591837e6-8e42-4118-9f46-daa2d38bae12",
+				"method": "POST"
+			},
+			{
+				"id": "4898f98d-41e9-4070-9b83-af48ee5511d7",
+				"method": "POST"
+			}
+		]
+	}
+}
